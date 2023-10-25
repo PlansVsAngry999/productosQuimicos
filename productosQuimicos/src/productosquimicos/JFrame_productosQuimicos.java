@@ -4,8 +4,12 @@ package productosquimicos;
 * @author Ricardo Daniel Hernández Sosa (PlansVsAngry999).
  */
 public class JFrame_productosQuimicos extends javax.swing.JFrame {
+     //Declarar variables...
+        double litros, detergente, densidad, agua, sales;
+        String TXTAgua, TXTSales;
     public JFrame_productosQuimicos() {
         initComponents();
+           
     }
 
     @SuppressWarnings("unchecked")
@@ -22,7 +26,6 @@ public class JFrame_productosQuimicos extends javax.swing.JFrame {
         pnlDetergente = new javax.swing.JPanel();
         sldDetergente = new javax.swing.JSlider();
         lblDetergente = new javax.swing.JLabel();
-        btnCalcular = new javax.swing.JButton();
         lblAgua = new javax.swing.JLabel();
         lblSales = new javax.swing.JLabel();
 
@@ -39,7 +42,7 @@ public class JFrame_productosQuimicos extends javax.swing.JFrame {
         sldLitros.setPaintLabels(true);
         sldLitros.setPaintTicks(true);
         sldLitros.setSnapToTicks(true);
-        sldLitros.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sldLitros.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         sldLitros.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 sldLitrosStateChanged(evt);
@@ -84,7 +87,7 @@ public class JFrame_productosQuimicos extends javax.swing.JFrame {
         sldDensidad.setSnapToTicks(true);
         sldDensidad.setToolTipText("");
         sldDensidad.setValue(100);
-        sldDensidad.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sldDensidad.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         sldDensidad.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 sldDensidadStateChanged(evt);
@@ -127,7 +130,7 @@ public class JFrame_productosQuimicos extends javax.swing.JFrame {
         sldDetergente.setPaintTicks(true);
         sldDetergente.setSnapToTicks(true);
         sldDetergente.setValue(5);
-        sldDetergente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sldDetergente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         sldDetergente.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 sldDetergenteStateChanged(evt);
@@ -161,26 +164,13 @@ public class JFrame_productosQuimicos extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        btnCalcular.setBackground(new java.awt.Color(19, 81, 144));
-        btnCalcular.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
-        btnCalcular.setForeground(new java.awt.Color(255, 255, 255));
-        btnCalcular.setText("Calcular");
-        btnCalcular.setToolTipText("");
-        btnCalcular.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(29, 25, 43)));
-        btnCalcular.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcularActionPerformed(evt);
-            }
-        });
-
         lblAgua.setBackground(new java.awt.Color(20, 35, 44));
         lblAgua.setFont(new java.awt.Font("Bauhaus 93", 0, 10)); // NOI18N
         lblAgua.setForeground(new java.awt.Color(255, 255, 255));
         lblAgua.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAgua.setText("...");
         lblAgua.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "--Agua en la solución--", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Narrow", 0, 10), new java.awt.Color(204, 204, 255))); // NOI18N
-        lblAgua.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        lblAgua.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         lblAgua.setOpaque(true);
 
         lblSales.setBackground(new java.awt.Color(42, 20, 44));
@@ -189,7 +179,7 @@ public class JFrame_productosQuimicos extends javax.swing.JFrame {
         lblSales.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSales.setText("...");
         lblSales.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "--Sales en la solución--", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Narrow", 0, 10), new java.awt.Color(204, 204, 255))); // NOI18N
-        lblSales.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        lblSales.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         lblSales.setOpaque(true);
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
@@ -200,11 +190,9 @@ public class JFrame_productosQuimicos extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(lblSales, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblSales, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblAgua, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblAgua, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(pnlLitros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pnlDensidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pnlDetergente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -220,10 +208,7 @@ public class JFrame_productosQuimicos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlDensidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(btnCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(11, 11, 11))
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblAgua, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
                     .addComponent(lblSales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
@@ -249,30 +234,8 @@ public class JFrame_productosQuimicos extends javax.swing.JFrame {
         TXTLitros = String.valueOf(sldLitros.getValue());
             //Colocar valor en su respectivo Label.
         lblLitros.setText(TXTLitros);
-    }//GEN-LAST:event_sldLitrosStateChanged
-
-    private void sldDetergenteStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldDetergenteStateChanged
-            //Declarar variable que almacena el valor del Slider...
-        String TXTDetergente;
-            //Asignar a la cadena de texto (TXT) el valor del Slider que ha sido convertido a String.
-        TXTDetergente = String.valueOf(sldDetergente.getValue());
-            //Colocar valor en su respectivo Label.
-        lblDetergente.setText(TXTDetergente);
-    }//GEN-LAST:event_sldDetergenteStateChanged
-
-    private void sldDensidadStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldDensidadStateChanged
-            //Declarar variable que almacena el valor del Slider...
-        String TXTDensidad;
-            //Asignar a la cadena de texto (TXT) el valor del Slider que ha sido convertido a String.
-        TXTDensidad = String.valueOf(sldDensidad.getValue());
-            //Colocar valor en su respectivo Label.
-        lblDensidad.setText(TXTDensidad);
-    }//GEN-LAST:event_sldDensidadStateChanged
-
-    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
-            //Declarar variables...
-        double litros, detergente, densidad, agua, sales;
-        String TXTAgua, TXTSales;
+        
+        //Lo que haria si tuviese un botón...
             //Asignar a las variables tipo doble su respectivo valor, asignado por sus Slider's.
         litros = sldLitros.getValue();
         detergente = sldDetergente.getValue();
@@ -286,7 +249,55 @@ public class JFrame_productosQuimicos extends javax.swing.JFrame {
             //Colocar las variables String (TXT) en sus respectivos Label's.
         lblAgua.setText(TXTAgua);
         lblSales.setText(TXTSales);
-    }//GEN-LAST:event_btnCalcularActionPerformed
+    }//GEN-LAST:event_sldLitrosStateChanged
+
+    private void sldDetergenteStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldDetergenteStateChanged
+            //Declarar variable que almacena el valor del Slider...
+        String TXTDetergente;
+            //Asignar a la cadena de texto (TXT) el valor del Slider que ha sido convertido a String.
+        TXTDetergente = String.valueOf(sldDetergente.getValue());
+            //Colocar valor en su respectivo Label.
+        lblDetergente.setText(TXTDetergente);
+        
+        //Lo que haria si tuviese un botón...   
+            //Asignar a las variables tipo doble su respectivo valor, asignado por sus Slider's.
+        litros = sldLitros.getValue();
+        detergente = sldDetergente.getValue();
+        densidad = sldDensidad.getValue();
+            //Asignar a la variable 'agua'  y a 'sales' su respectivo valor.
+        agua = (2*(litros))+(detergente/densidad);
+        sales = ((detergente*litros))/((100*densidad));
+            //Convertir los valores enteros (INT) de 'agua' y 'sales' a cadena de texto (String).
+        TXTAgua = String.valueOf(agua);
+        TXTSales = String.valueOf(sales);
+            //Colocar las variables String (TXT) en sus respectivos Label's.
+        lblAgua.setText(TXTAgua);
+        lblSales.setText(TXTSales);
+    }//GEN-LAST:event_sldDetergenteStateChanged
+
+    private void sldDensidadStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldDensidadStateChanged
+            //Declarar variable que almacena el valor del Slider...
+        String TXTDensidad;
+            //Asignar a la cadena de texto (TXT) el valor del Slider que ha sido convertido a String.
+        TXTDensidad = String.valueOf(sldDensidad.getValue());
+            //Colocar valor en su respectivo Label.
+        lblDensidad.setText(TXTDensidad);
+        
+         //Lo que haria si tuviese un botón...
+            //Asignar a las variables tipo doble su respectivo valor, asignado por sus Slider's.
+        litros = sldLitros.getValue();
+        detergente = sldDetergente.getValue();
+        densidad = sldDensidad.getValue();
+            //Asignar a la variable 'agua'  y a 'sales' su respectivo valor.
+        agua = (2*(litros))+(detergente/densidad);
+        sales = ((detergente*litros))/((100*densidad));
+            //Convertir los valores enteros (INT) de 'agua' y 'sales' a cadena de texto (String).
+        TXTAgua = String.valueOf(agua);
+        TXTSales = String.valueOf(sales);
+            //Colocar las variables String (TXT) en sus respectivos Label's.
+        lblAgua.setText(TXTAgua);
+        lblSales.setText(TXTSales);
+    }//GEN-LAST:event_sldDensidadStateChanged
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -310,7 +321,7 @@ public class JFrame_productosQuimicos extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(JFrame_productosQuimicos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+            
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -320,7 +331,6 @@ public class JFrame_productosQuimicos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCalcular;
     private javax.swing.JLabel lblAgua;
     private javax.swing.JLabel lblDensidad;
     private javax.swing.JLabel lblDetergente;
